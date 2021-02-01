@@ -44,7 +44,7 @@ const search = async(e) => {
 }
 */
 
-const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, description,temp, windSpeed, humidity}) => {
+const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, description,temp, windSpeed, humidity, loading}) => {
 
   //  const [query, setQuery] = useState('');
 //    const [weather,setWeather] = useState({});
@@ -93,7 +93,7 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 </div>
 <div className="col-md-6 mb-1">
 
-    
+{!loading ? (<h6>Loading...</h6>) : (
 <div className = "container" style = {styles.styles}>
 <div className="card">
 
@@ -106,8 +106,8 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 </div>
 
 
-
 </div>
+)}
 </div>    
 </div>
 </section>
