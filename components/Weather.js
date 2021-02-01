@@ -81,7 +81,7 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
   <strong>answer</strong>,
   <strong>74</strong> CSS animations, SASS files, templates, tutorials and many more.
   <strong>{cityName} {description}, Temp: {temp} </strong>
-  <div className = "text-center" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>
+  <div className = "text-center" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/10d@4x.png`} alt="Weather icon"></img></div>
 </p>
 
 <div className="form-outline">
