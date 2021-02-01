@@ -25,7 +25,7 @@ const divStyle = {
 
 const api = {
     key : `&appid=f4f9383eef9528bc3c297b858a4a07b0`,
-    url : `http://api.openweathermap.org/data/2.5/weather?q=`,
+    url : `https://api.openweathermap.org/data/2.5/weather?q=`,
 }
 
 
