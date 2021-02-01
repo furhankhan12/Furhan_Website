@@ -93,7 +93,9 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 </div>
 <div className="col-md-6 mb-1">
 
-{!loading ? (<h6>Loading...</h6>) : (
+{!loading ? (<div class="spinner-border text-success text-center" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>) : (
 <div className = "container" style = {styles.styles}>
 <div className="card">
 
