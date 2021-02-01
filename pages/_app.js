@@ -4,6 +4,8 @@ import 'mdbreact/dist/css/mdb.css'
 import '../styles/globals.css'
 import Layout from '../components/Layout'
 
+//https://furhan-website.vercel.app/
+
 function MyApp({ Component, pageProps }) {
  return( 
   <Layout>
