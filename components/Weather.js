@@ -81,7 +81,7 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
   <strong>answer</strong>,
   <strong>74</strong> CSS animations, SASS files, templates, tutorials and many more.
   <strong>{cityName} {description}, Temp: {temp} </strong>
-  <div className = "text-center" id="icon"><img id="wicon" src={`http://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>
+  <div className = "text-center" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>
 </p>
 
 <div className="form-outline">
@@ -101,7 +101,7 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 <h7>{description}<span>Wind: {windSpeed} mph <span className="dot">•</span> Humidity {humidity}%</span></h7>
 <h5>{Math.round(temp)}°</h5>
 <div className="weather">
-<div className = "text-right postion-relative top-5" id="icon"><img id="wicon" src={`http://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>
+<div className = "text-right postion-relative top-5" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>
 </div>
 </div>
 
