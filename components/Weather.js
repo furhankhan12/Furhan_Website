@@ -1,11 +1,4 @@
 import React from 'react'
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
-import styles from '../styles/weather.module.css'
-const api = {
-    key : '&appid=61815b2f14b7f18f39a7df9bc96575a8',
-    url : "https://api.openweathermap.org/data/2.5/weather?q=",
-}
-
 
 /*
 <table>
@@ -65,25 +58,24 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
     */
 
     return (
-        <section className="mt-5 wow fadeIn">
+        <section className="mt-5 mb-5 wow fadeIn">
     
         <div className="row">
 
         <div className="col-md-6 mb-4">
 
-<h3 className="h3 mb-3"> Blah Blah Blah</h3>
-<p>This template is created with Material Design for Bootstrap (
-  <strong>MDB</strong> ) framework.</p>
-<p>Read details below to learn more about MDB.
+<h3 className="h3 mb-3"> Featured Project</h3>
+<strong>Open Weather API Demo</strong>
+<div className = "text-center" id="icon"><br></br><img className = "wicon" src='openweather_logo.jpg' ></img></div>
+<p><br></br>This is a demo of an application I created using OpenWeather's free API. </p>
+<p>It display's the current weather of any city in OpenWeater's database. 
+    In the future I plan to expand on this project to automatically generate the current weather based on the user's location and also introduce more extensive error handling
 </p>
-<p>
-  <strong>400+</strong> material UI elements,
-  <strong>answer</strong>,
-  <strong>74</strong> CSS animations, SASS files, templates, tutorials and many more.
-  <strong>{cityName} {description}, Temp: {temp} </strong>
-  <div className = "text-center" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/10d@4x.png`} alt="Weather icon"></img></div>
+<p className = "container text-center">
+    <strong>Try it out! Just enter the name of any city</strong>
 </p>
-
+<br></br>
+<div className = "text-center">
 <div className="form-outline">
 <form onSubmit = {handleSubmit}>
   <input type="text" id="form1" className="form-control"  onChange = {handleChange} value = {currentCity}/>
@@ -91,16 +83,18 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 </form>
 </div>
 </div>
+</div>
 <div className="col-md-6 mb-1">
 
-{!loading ? (<div class="spinner-border text-success text-center" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>) : (
-<div className = "container" style = {styles.styles}>
+{!loading ? (<div className = "d-flex justify-content-md-center align-self-center" >       
+ <div className="spinner-border text-success" role="status">
+  <span className="visually-hidden"></span>
+</div></div>) : (
+<div className = "container">
 <div className="card">
 
 <h6>{cityName}</h6>
-<h7>{description}<span>Wind: {windSpeed} mph <span className="dot">•</span> Humidity {humidity}%</span></h7>
+<div className = "stuff">{description}<span>Wind: {windSpeed} mph <span className="dot">•</span> Humidity {humidity}%</span></div>
 <h5>{Math.round(temp)}°</h5>
 <div className="weather">
 <div className = "text-right postion-relative top-5" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>

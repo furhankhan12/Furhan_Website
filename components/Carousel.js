@@ -1,4 +1,10 @@
+import Clock from '../components/Clock'
+
 const Carousel = () => {
+    const clockStyle = {
+        opacity : '.4',
+        'fontSize' : '1.5em',
+    }
     return (
         <div id="carousel-example-1z" className ="carousel slide carousel-fade" data-ride="carousel">
 
@@ -13,28 +19,24 @@ const Carousel = () => {
             <div className ="view">
         
               <video className ="video-intro" autoPlay loop muted>
-                <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4"></source>
+                <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4"></source>
               </video>
         
               <div className ="mask rgba-black-light d-flex justify-content-center align-items-center">
         
                 <div className ="text-center white-text mx-5 wow fadeIn">
-                  <h1 className ="mb-4">
-                    <strong> Damn, bitch you code like this</strong>
+                  <h1 className ="mb-1">
+                    <strong>Furhan Khan</strong>
                   </h1>
-        
-                  <p>
-                    <strong>Oh how did u know that I'm clinically insane</strong>
+                   <p>
+                  <strong style = {clockStyle}><Clock></Clock></strong>
                   </p>
-        
                   <p className ="mb-4 d-none d-md-block">
-                    <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
-                      written versions
-                      available. Create your own, stunning website.</strong>
+                    <strong>A Software Developer Based Out of Northern Virginia</strong>
                   </p>
         
-                  <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" className ="btn btn-outline-white btn-lg"> Link to my cock and balls
-                    <i className ="fas fa-graduation-cap ml-2"></i>
+                  <a target="_blank" href="/Furhan_Khan_Resume.pdf" className ="btn btn-outline-white btn-lg"> Download My Resume
+                    <i className ="fas fa-download ml-2"></i>
                   </a>
                 </div>
         
@@ -47,28 +49,23 @@ const Carousel = () => {
             <div className ="view">
         
               <video className ="video-intro" autoPlay loop muted>
-                <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4"></source>
+                <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4"></source>
               </video>
         
               <div className ="mask rgba-black-light d-flex justify-content-center align-items-center">
         
                 <div className ="text-center white-text mx-5 wow fadeIn">
-                  <h1 className ="mb-4">
-                    <strong>Poggers</strong>
+                  <h1 className ="mb-1">
+                    <strong>Furhan Khan</strong>
                   </h1>
-        
-                  <p>
-                    <strong>Best & free guide of responsive web design</strong>
-                  </p>
+                  <p><strong style = {clockStyle}><Clock></Clock></strong></p>
         
                   <p className ="mb-4 d-none d-md-block">
-                    <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and
-                      written versions
-                      available. Create your own, stunning website.</strong>
+                    <strong>"If You Set Your Goals Ridiculously High and It's a Failure, You Will Fail Above Everyone Else's Success." - James Cameron</strong>
                   </p>
         
-                  <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" className ="btn btn-outline-white btn-lg">Link To My Cock and Balls
-                    <i className ="fas fa-graduation-cap ml-2"></i>
+                  <a target="_blank" href="/Furhan_Khan_Resume.pdf" className ="btn btn-outline-white btn-lg">Download My Resume
+                    <i className ="fas fa-download ml-2"></i>
                   </a>
                 </div>
         
@@ -86,20 +83,17 @@ const Carousel = () => {
               <div className ="mask rgba-black-light d-flex justify-content-center align-items-center">
         
                 <div className ="text-center white-text mx-5 wow fadeIn">
-                  <h1 className ="mb-4">
-                    <strong>Draiiiiiiin Gannggggg</strong>
+                  <h1 className ="mb-1">
+                    <strong>Furhan Khan</strong>
                   </h1>
-        
-                  <p>
-                    <strong>Website by: Furhan Khan</strong>
-                  </p>
+                  <p><strong style = {clockStyle}><Clock></Clock></strong></p>
         
                   <p className ="mb-4 d-none d-md-block">
-                    <strong>BIG TEXT</strong>
+                    <strong>Alumni of The University of Virginia</strong>
                   </p>
         
-                  <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" className ="btn btn-outline-white btn-lg">Link To My Cock and Balls
-                    <i className ="fas fa-graduation-cap ml-2"></i>
+                  <a target="_blank" href="/Furhan_Khan_Resume.pdf" className ="btn btn-outline-white btn-lg">Download My Resume
+                    <i className ="fas fa-download ml-2"></i>
                   </a>
                 </div>
         

@@ -4,7 +4,7 @@ const Navigation = () => {
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
       <div className="container">
 
-        <a className="navbar-brand" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+        <a className="navbar-brand" href="/" target="_blank">
           <strong>Furhan Khan</strong>
         </a>
 
@@ -16,37 +16,28 @@ const Navigation = () => {
 
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">Home
+              <a className="nav-link" href="/">Home
                 <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">About MDB</a>
+              <a className="nav-link" href="/movies/" target="_blank">Project Demo 1</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank">Free
-                download</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free tutorials</a>
+              <a className="nav-link" href="https://hooshome.herokuapp.com/" target="_blank">Project Demo 2</a>
             </li>
           </ul>
 
           <ul className="navbar-nav nav-flex-icons">
             <li className="nav-item">
-              <a href="https://www.facebook.com/mdbootstrap" className="nav-link" target="_blank">
-                <i className="fab fa-facebook-f"></i>
+              <a href="https://www.linkedin.com/in/furhan-khan12/" className="nav-link" target="_blank">
+                <i className="fab fa-linkedin"></i>
               </a>
             </li>
             <li className="nav-item">
-              <a href="https://twitter.com/MDBootstrap" className="nav-link" target="_blank">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="https://github.com/mdbootstrap/bootstrap-material-design" className="nav-link border border-light rounded"
+              <a href="https://github.com/furhankhan12" className="nav-link border border-light rounded"
                 target="_blank">
-                <i className="fab fa-github mr-2"></i>MDB GitHub
+                <i className="fab fa-github mr-2"></i> Furhan's GitHub
               </a>
             </li>
           </ul>

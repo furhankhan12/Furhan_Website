@@ -13,7 +13,7 @@ const defaultOptions = { scrollwheel: true };
 const RegularMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
-      defaultZoom={8}
+      defaultZoom={8.5}
       defaultCenter={ defaultCenter }
       defaultOptions={ defaultOptions }
     >
@@ -35,7 +35,8 @@ const Map = () => {
 
         
           <div className="col-md-6 mb-4">
-
+            <br></br>
+            <br></br>
           <RegularMap
   googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwIZfC5nenr8wwGRcYUt8oOVC0MGSsSqk"
   loadingElement={<div style={ loadingElementStyle } />}
@@ -49,22 +50,17 @@ const Map = () => {
         
           <div className="col-md-6 mb-4">
 
-            <h3 className="h3 mb-3"> Gang Shit</h3>
-            <p>This template is created with Material Design for Bootstrap (
-              <strong>MDB</strong> ) framework.</p>
-            <p>Read details below to learn more about MDB.</p>
-
+            <h3 className="h3 mb-3"> About Me</h3>
+            <p>My name is Furhan Khan and I am software developer from Northern Virginia. I recently graduated from the University of Virginia with a degree in computer science and am now looking for a full-time role to utilize my skills to make a real-world impact.</p>
+            <p>I am passionate about software development, particularly web-development. I am also a quick and avid learner who is always willing to expand my skill-set and emerse myself in the newest technologies</p>
             <p>
-              <strong>400+</strong> material UI elements,
-              <strong>600+</strong> material icons,
-              <strong>74</strong> CSS animations, SASS files, templates, tutorials and many more.
-              <strong>Free for personal and commercial use.</strong>
+                Outside of VS code I would describe myself as a fun and energetic person who's always striving to be better every day.
             </p>
 
-            <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" className="btn btn-grey btn-md">Download
+            <a target="_blank" href= "/Furhan_Khan_Resume.pdf" className="btn btn-grey btn-md">Download
               <i className="fas fa-download ml-1"></i>
             </a>
-            <a target="_blank" href="https://mdbootstrap.com/docs/jquery/components/" className="btn btn-grey btn-md">Live
+            <a target="_blank" href= "/movies"className="btn btn-grey btn-md">Live
               demo
               <i className="far fa-image ml-1"></i>
             </a>
