@@ -64,7 +64,7 @@ export default class Home extends React.Component{
   return (
     <>
       <Head>
-        <title>Furhan's Movie Database</title>
+        <title>Furhan's Website</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 <Carousel></Carousel>
