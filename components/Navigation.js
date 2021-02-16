@@ -26,6 +26,9 @@ const Navigation = () => {
             <li className="nav-item">
               <a className="nav-link" href="https://hooshome.herokuapp.com/" target="_blank">Project Demo 2</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="https://musicvisualizer.vercel.app/" target="_blank">Music Visualizer</a>
+            </li>
           </ul>
 
           <ul className="navbar-nav nav-flex-icons">

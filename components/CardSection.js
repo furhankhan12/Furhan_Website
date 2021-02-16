@@ -66,7 +66,7 @@ Html/Bootstrap/JavaScript, PHP and PostgreSQL
 
         
           <div className="col-lg-6 col-md-12">
-           <div className = "container text-center">
+           <div className = "cardHolder">
                <h3><strong>Meet Furhan Khan</strong></h3>
             <div className="flip-card">
                 <div className="flip-card-inner">
@@ -75,7 +75,7 @@ Html/Bootstrap/JavaScript, PHP and PostgreSQL
                 <div className="flip-card-back">
                     <br></br>
                     <h1><strong>Furhan Khan</strong></h1>
-                    <img src = "uvalogo.png" style = {logoStyle}></img>
+                    <div className = "img-fluid z-depth-1-half"><img src = "uvalogo.png" style = {logoStyle}></img></div>
                     <br></br>
                     <br></br>
                     <strong>University of Virginia</strong>
