@@ -6,6 +6,8 @@ import {
   Marker
 } from "react-google-maps"
 
+import Link from 'next/link'
+
 const defaultCenter = { lat: 38.776590, lng: -77.616270 };
 
 const defaultOptions = { scrollwheel: true };
@@ -60,10 +62,11 @@ const Map = () => {
             <a target="_blank" href= "/Furhan_Khan_Resume.pdf" className="btn btn-grey btn-md">Download
               <i className="fas fa-download ml-1"></i>
             </a>
-            <a target="_blank" href= "/movies"className="btn btn-grey btn-md">Live
-              demo
+            <Link href = "/movies">
+            <a className="btn btn-grey btn-md">Live Demo
               <i className="far fa-image ml-1"></i>
             </a>
+            </Link>
 
           </div>
         

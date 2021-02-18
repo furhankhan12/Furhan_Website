@@ -33,7 +33,7 @@ export default function movies({ movies, page} ) {
 
             
           <a className="card" key = {movie.name}>
-          <div className = "weather text-center">
+          <div className = "movieCard text-center">
             <h3> {movie.name} &rarr; ({movie.year})</h3>
             <img className = "movieImage" src ={movie.image}></img>
             <p>{movie.plot}</p>

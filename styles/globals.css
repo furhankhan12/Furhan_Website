@@ -104,16 +104,6 @@ body {
     overflow: hidden;
 }
 
-@keyframes open {
-    from {
-        padding: 0 30px;
-        height: 0;
-    }
-    to {
-        height: 470px;
-    }
-}
-
 h5,
 h6,
 .stuff,
@@ -128,13 +118,13 @@ h5 {
     font-weight: 300;
     font-size: 6.59375em;
     line-height: .7em;
-    animation: up 2s cubic-bezier(.39, 0, .38, 1);
+    animation: up 1s cubic-bezier(.39, 0, .38, 1);
 }
 
 h6 {
     font-weight: 300;
     font-size: 2.25em;
-    animation: up 2s cubic-bezier(.39, 0, .38, 1);
+    animation: up 1s cubic-bezier(.39, 0, .38, 1);
 }
 
 .stuff {
@@ -143,7 +133,7 @@ h6 {
     color: #777;
     font-weight: 400;
     font-size: 1em;
-    animation: up 2s cubic-bezier(.39, 0, .38, 1);
+    animation: up 1s cubic-bezier(.39, 0, .38, 1);
 }
 
 span {
@@ -158,13 +148,6 @@ span span {
 
 .dot {
     font-size: .9em;
-}
-
-table {
-    position: relative;
-    top: 10px;
-    width: 100%;
-    text-align: center;
 }
 
 
@@ -184,7 +167,10 @@ table {
         opacity: 1;
     }
 }
-  
+
+.movieCard{
+  animation: up .8s cubic-bezier(.39, 0, .38, 1) ;
+}
 .weather{
   top: 15;
   animation: up 2s cubic-bezier(.39, 0, .38, 1) ;
