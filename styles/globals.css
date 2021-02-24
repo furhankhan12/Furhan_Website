@@ -246,3 +246,11 @@ span span {
   width: 160px;
   border-radius: 50%;
 }
+
+.pegger
+{position: relative; 
+  overflow: hidden; 
+  text-align: center;
+  transform: scale(1); 
+  transform-origin: 0px 0px; 
+}

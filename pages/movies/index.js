@@ -5,7 +5,6 @@ import Router from 'next/router'
 
 
 export default function movies({ movies, page} ) {
-
   const textColor =  {
     color : 'blue'
   }
@@ -198,7 +197,7 @@ export default function movies({ movies, page} ) {
         }
       `}</style>
       <ul className="pagination">
-  <li className="page-item"><a className="page-link" onClick={() => Router.push(`/movies/?page=${page - 1}`)}><strong >Previous</strong></a></li>
+  {page>1 && <li className="page-item"><a className="page-link" onClick={() => Router.push(`/movies/${page === 2 ? "" :"?page="+(page - 1)}`)}><strong >Previous</strong></a></li>}
   <li className="page-item"><a className="page-link" onClick={() => Router.push(`/movies/?page=${page + 1}`)}><strong>Next</strong></a></li>
   <li className="page-item"><a className="page-link" href="/movies"><strong>Start</strong></a></li>
 </ul>
