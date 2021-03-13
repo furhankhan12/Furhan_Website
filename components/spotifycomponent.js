@@ -21,7 +21,8 @@ const spotify = () => {
 
     return(
     <section className = "container">
-    <h2 className = "my-3 h3 text-center"> My Top 10 Tracks <br></br><strong>(Updated Daily)</strong></h2>
+    <h2 className = "my-2 h3 text-center"> My Top 10 Tracks</h2>
+    <p className = "text-center">Updated Daily</p>
     <div className = "trackcontainer">
 
     { (!!data || error) ?    data.tracks.map((track,idx) =>
@@ -44,6 +45,8 @@ const spotify = () => {
         </div></div> 
     }
     </div>
+    <br></br>
+    <br></br>
     </section>
     )
 }

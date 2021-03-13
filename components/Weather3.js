@@ -37,6 +37,7 @@ const search = async(e) => {
 }
 */
 
+
 const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, description,temp, windSpeed, humidity, loading}) => {
 
   //  const [query, setQuery] = useState('');
