@@ -1,62 +1,42 @@
-import React from 'react'
-
-/*
-<table>
-    <tr>
-        <td>TUE</td>
-        <td>WED</td>
-        <td>THU</td>
-        <td>FRI</td>
-        <td>SAT</td>
-    </tr>
-    <tr>
-        <td>30°</td>
-        <td>34°</td>
-        <td>36°</td>
-        <td>34°</td>
-        <td>37°</td>
-    </tr>
-    <tr>
-        <td>17°</td>
-        <td>22°</td>
-        <td>19°</td>
-        <td>23°</td>
-        <td>19°</td>
-    </tr>
-</table>
-*/
-
-/*
-const [query,setQuery] = useState('');
-const search = async(e) => {
-    if (e.key =='Enter') {
-        const resp = await forecast(query)
-        setWearther(resp);
-        setQuery('');
+import React,{useEffect,useState} from 'react'
+import axios from 'axios'
+const Weather = () => {
+    const api = {
+        key : `&appid=f4f9383eef9528bc3c297b858a4a07b0`,
+        url : `https://api.openweathermap.org/data/2.5/weather?q=`,
     }
-}
-*/
-
-const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, description,temp, windSpeed, humidity, loading}) => {
-
-  //  const [query, setQuery] = useState('');
-//    const [weather,setWeather] = useState({});
-
-
-    /*
-    const forecast = target => {
-        if (target.key === "Enter") {
-           await fetch('${api.url}${query}&units=metric${api.key}.json')
-            .then(res => res.json())
-            .then(result =>{
-                setWeather(result).json();
-                setQuery('').json();
-                console.log(result)
-            });
+    const [city,setCity] = useState('New York')
+    const[weather,setWeather] = useState(null)
+    useEffect(() => {
+        apiCall(city)
+        return () => {
+            console.log(apiCall)
         }
-    }
-    */
+    }, [])
 
+    async function apiCall(cityName){
+        setCity(cityName)
+        const loc = `${api.url}${cityName}&units=imperial${api.key}`
+        await axios.get(loc)
+        .then(resp => {
+          const result = resp.data
+          const forecast = [result.name,result.main.temp,result.weather[0].icon,
+          result.weather[0].main,result.main.humidity,result.wind.speed]
+        setWeather(forecast)
+    }).catch(error => {
+            setWeather(null)
+            console.log(error)});
+    };
+
+    const handleChange = (e) => {
+        e.preventDefault()
+        setCity(e.target.value)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        apiCall(city)
+
+    }
     return (
         <section className="mt-5 mb-5 wow fadeIn">
     
@@ -78,7 +58,7 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 <div className = "text-center">
 <div className="form-outline">
 <form onSubmit = {handleSubmit}>
-  <input type="text" id="form1" className="form-control"  onChange = {handleChange} value = {currentCity}/>
+  <input type="text" id="form1" className="form-control"  onChange = {handleChange} value = {city}/>
   <label className="form-label" htmlFor="form1">Search Any City</label>
 </form>
 </div>
@@ -86,30 +66,31 @@ const Weather = ({handleChange,currentCity,handleSubmit,icon,cityName, descripti
 </div>
 <div className="col-md-6 mb-1">
 
-{!loading ? (<div className = "d-flex justify-content-md-center align-self-center" >       
- <div className="spinner-border text-success" role="status">
-  <span className="visually-hidden"></span>
-</div></div>) : (
+{ !!weather ?
+(
 <div className = "container">
 <div className="card">
 
-<h6>{cityName}</h6>
-<div className = "stuff">{description}<span>Wind: {windSpeed} mph <span className="dot">•</span> Humidity {humidity}%</span></div>
-<h5>{Math.round(temp)}°</h5>
+<h6>{weather[0]}</h6>
+<div className = "stuff">{weather[3]}<span>Wind: {weather[5]} mph <span className="dot">•</span> Humidity {weather[4]}%</span></div>
+<h5>{Math.round(weather[1])}°</h5>
 <div className="weather">
-<div className = "text-right postion-relative top-5" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt="Weather icon"></img></div>
+<div className = "text-right postion-relative top-5" id="icon"><img id="wicon" src={`https://openweathermap.org/img/wn/${weather[2]}@4x.png`} alt="Weather icon"></img></div>
 </div>
 </div>
 
 
 </div>
-)}
+) :   (<div className = "d-flex justify-content-md-center align-self-center" >       
+<div className="spinner-border text-success" role="status">
+ <span className="visually-hidden"></span>
+</div></div>)}
 </div>    
 </div>
 </section>
 
-    );
-    }
+
+    )
+}
 
 export default Weather
-

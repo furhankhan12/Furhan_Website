@@ -1,20 +1,21 @@
 
-import React from 'react'
-var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-export default class Clock extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {date: new Date()}
+import React,{useState,useEffect} from 'react'
+const Clock = () => {
+    let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    const [date,setDate] = useState(new Date())
+    useEffect(() => {
+        var time = setInterval(() => tick(),1000)
+        return () => {
+            clearInterval(time)
+
+        }
+    })
+    function tick(){
+        setDate(new Date())
     }
-    componentDidMount(){
-        this.timer = setInterval(() => this.setState({date : new Date()}))
-    }
-    componentWillUnmount(){
-        clearInterval(this.timer)
-    } 
-    render(){
     return(
-        <strong id="clock"> { days[this.state.date.getDay()] + " " +  this.state.date.toLocaleTimeString()}</strong>
+        <strong id="clock"> { days[date.getDay()] + " " +  date.toLocaleTimeString()}</strong>
     )
-    }
 }
+
+export default Clock
