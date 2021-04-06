@@ -15,14 +15,13 @@ import fetcher from '../lib/fetcher'
 
 // {"access_token":"BQAHzr8crlLe2LOioq6D4RQmRDbW8gfpaJZDkQUlMvDHS89S4BvLRJKgRMA52bbLcO1BAro5qNgf60wgySGIaorZanyXPPeu4enkNdsGLjZDm1VpZfHjpvaunHaaZrDcNUANSGr9Bf2gHNDwuyRYwiTl9g","token_type":"Bearer","expires_in":3600,"refresh_token":"AQAcRyYwQMAKJJwtltD6KpyzBZwEFiB0sCcG16Ve4RsJHd7OdghPruZ9C806ESLVtiCa2e_Z9S5eEDoLr4e-1gCO5TpY0ocoDiT4T5ClvtuD3v5qLlXxGZgttjjKyn9Bpzk","scope":"user-read-currently-playing user-top-read"}
 
-//     {(!!data || error) ? data.tracks.map((track,i) => <h1 key = {i}>{track.title} {track.album} <img src = {track.art.url}></img></h1>) : <h1>not there</h1>}
 const spotify = () => {
     const {data,error} = useSWR('/api/mytoptracks',fetcher)
 
     return(
     <section className = "container">
-    <h2 className = "my-2 h3 text-center"> My Top 10 Tracks</h2>
-    <p className = "text-center">Updated Daily</p>
+    <h2 className = "my-2 h3 text-center"> Check Out Some Tracks I've Been Jamming To</h2>
+    <p className = "text-center">Updated Daily via Spotify API</p>
     <div className = "trackcontainer">
 
     { (!!data || error) ?    data.tracks.map((track,idx) =>

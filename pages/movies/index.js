@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { connectToDatabase } from '../../util/mongodb'
-
 import Router from 'next/router'
 
 

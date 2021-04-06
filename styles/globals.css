@@ -297,3 +297,67 @@ span span {
 .trackTitle{
   color: rgb(80, 85, 90);
 }
+
+.btn-info:hover {
+  background-color: limegreen !important;
+  border-color: transparent;
+}
+.btn-info {
+  background-color: slateblue !important;
+  border-color: transparent;
+}
+
+.btn-primary{
+  position: absolute;
+  bottom: 10px;
+  right : 10px;
+  border-color: transparent;
+}
+
+.btn-primary:hover{
+  background-color: limegreen !important;
+  border-color: transparent;
+}
+
+.btn-dark{
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  border-color: transparent;
+  background-color: coral !important;
+}
+
+.btn-dark:hover{
+  background-color: limegreen !important;
+  border-color: transparent;
+}
+
+
+.btn-danger{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-color: transparent;
+}
+
+.btn-danger:hover{
+  border-color: transparent;
+  background-color: limegreen !important;
+}
+
+.btn-success{
+  border-color: transparent;
+}
+.btn-success:hover{
+  border-color: transparent;
+  background-color: limegreen !important;
+}
+.btn-warning{
+  border-color: transparent;
+}
+
+.btn-warning:hover{
+  border-color: transparent;
+  background-color: limegreen !important;
+}
+
