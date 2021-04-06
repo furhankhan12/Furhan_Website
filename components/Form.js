@@ -89,6 +89,7 @@ export default function Form({formID,pokeForm,newPokemon}) {
         })
       }
     return (
+      <div className = "min-vh-100">
         <form className = "container mt-5 pt-5" id = {formID}>
         <label htmlFor="name">Pokemon Name</label>
         <input
@@ -208,5 +209,7 @@ form button{
 `}
     </style>
     </form>
+    </div>
     )
+  
 }
