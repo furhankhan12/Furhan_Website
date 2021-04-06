@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 .grid{
     display: flex;
     flex-wrap: wrap;
@@ -5,6 +6,7 @@
 }
 
 .cardpoke {
+    font-family: 'Roboto','sans-serif';
     display: inline-block;
     width: 275px;
     height: 375px;
