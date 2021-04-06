@@ -353,10 +353,12 @@ span span {
   background-color: limegreen !important;
 }
 .btn-warning{
+  color : white !important;
   border-color: transparent;
 }
 
 .btn-warning:hover{
+  color: white !important;
   border-color: transparent;
   background-color: limegreen !important;
 }

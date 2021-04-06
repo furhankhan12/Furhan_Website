@@ -12,12 +12,12 @@ export default function edit() {
     const {data,error} = useSWR( id ? `/api/pokemon/${id}` : null,fetcher)
 
     if(error){
-        return (<div className = "d-flex justify-content-center my-5"><h1>failed to load</h1></div>)
+        return (<div className = "d-flex justify-content-center my-5 min-vh-100"><h1>failed to load</h1></div>)
     }
     if (!data){
         return (
         
-        <div className = 'd-flex justify-content-center my-5'><div className="spinner-border text-primary" role="status">
+        <div className = 'd-flex justify-content-center my-5 pt-5 min-vh-100'><div className="spinner-border text-primary" role="status">
         <span className="visually-hidden"></span>
        </div></div>)
     }

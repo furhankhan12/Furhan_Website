@@ -69,6 +69,7 @@ h3.poke_name {
     bottom: 0;
     padding: 10px;
     text-shadow: 0px 0px 4px black;
+    font-weight: 300 !important;
 }
 
 h3.poke_level{
@@ -78,6 +79,7 @@ h3.poke_level{
     top:0;
     padding: 10px;
     text-shadow: 0px 0px 4px black;
+    font-weight: 300 !important;
 }
 
 .buttonContainer {
