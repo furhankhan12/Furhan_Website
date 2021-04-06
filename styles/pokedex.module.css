@@ -6,7 +6,7 @@
 }
 
 .cardpoke {
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Roboto','sans-serif' !important;
     display: inline-block;
     width: 275px;
     height: 375px;
