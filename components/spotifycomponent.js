@@ -4,6 +4,7 @@
 
 import useSWR from 'swr'
 import fetcher from '../lib/fetcher'
+import ScaleText from 'react-scale-text'
 
 
 // code : AQD3omxEzJXN3b1eEfypaAbV8DTPvGIv0NG1wq4LHXPGqSK89_-6kpSQE4Bdk1hnSztajteATZWMVzraU35qopfosZW2sBHMFDDLOeBUGpbIYqN9rd8tW3pzLLFR2rvw6jbGJx6--XrM2mcQUOV2LHfPB0wEnWtc0ECKkI_xJrFBPgBK6qW182YHAV91GUlfwD5G2wBTkHgQEsgX1rbuNnhBOWbB4Q
@@ -26,11 +27,17 @@ const spotify = () => {
 
     { (!!data || error) ?    data.tracks.map((track,idx) =>
         <div className="track" key = {idx}>
-            <img className="track-img-top" src={track.art} alt="Card image cap"></img>
-            <div className="track-body">
-                <div className = "container text-center mt-2">
-                <h4 className="trackTitle">{track.title}</h4>
+            <img className="track-img-top h-50" src={track.art} alt="Card image cap"></img>
+            <div className = "trackbody text-center mt-1 w-100 pl-2 pr-2">
+                <div style = {{height : "60px" , width : "100%"}}>
+                <ScaleText minFontSize = {21} maxFontSize = {25}>
+                <p className = "trackTitle1"> {track.title}</p>
+                </ScaleText>
+                </div>
+                <div className = "container" style = {{height : "85px" , width : "100%"}}>
+                <ScaleText minFontSize = {5} maxFontSize = {17}>
                 <p className="trackTitle">{track.artist} - {track.album} </p>
+                </ScaleText>
                 </div>
             </div>
             <div className = "iconContainer">

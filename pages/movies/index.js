@@ -1,11 +1,24 @@
 import Head from 'next/head'
 import { connectToDatabase } from '../../util/mongodb'
+import {useState} from 'react'
 import Router from 'next/router'
+
 
 
 export default function movies({ movies, page} ) {
   const textColor =  {
     color : 'blue'
+  }
+  const [search,setSearch] = useState("")
+
+
+  const handleChange = (e) =>{
+    e.preventDefault()
+    setSearch(e.target.value)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    Router.push(`movies/search/${search}`)
   }
     
   return (
@@ -25,7 +38,10 @@ export default function movies({ movies, page} ) {
         <p className="description" style = {textColor}>
           This is a simple application that queries and filters a mongoDB collection <br></br> and paginates the results
         </p>
-
+        <form onSubmit = {handleSubmit}>
+          <input type="text" id="form2" className="form-control"  onChange = {handleChange} value = {search} />
+          <label className="form-label" htmlFor="form1">Search for a movie in my database</label>
+        </form>
         <div className="grid">
           {movies.map(movie => (
 

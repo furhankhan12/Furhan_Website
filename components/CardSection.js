@@ -75,7 +75,7 @@ Html/Bootstrap/JavaScript, PHP and PostgreSQL
                 <div className="flip-card-back">
                     <br></br>
                     <h1><strong>Furhan Khan</strong></h1>
-                    <div className = "img-fluid z-depth-1-half"><img src = "uvalogo.png" style = {logoStyle}></img></div>
+                    <div className = "img-fluid"><img src = "uvalogo.png" style = {logoStyle}></img></div>
                     <br></br>
                     <br></br>
                     <strong>University of Virginia</strong>

@@ -30,13 +30,13 @@ const mapElementStyle = { height: '100%' };
 
 const Map = () => {
     return (
-        <section className="mt-5 wow fadeIn">
+        <section className="mt-5">
     
     
-        <div className="row">
+        <div className="row flex-center">
 
         
-          <div className="col-md-6 mb-4">
+          <div className="col-lg-6 col-md-10 mb-4">
             <br></br>
             <br></br>
           <RegularMap
@@ -50,7 +50,7 @@ const Map = () => {
         
 
         
-          <div className="col-md-6 mb-4">
+          <div className="col-lg-6 col-md-10 mb-4">
 
             <h3 className="h3 mb-3"> About Me</h3>
             <p>My name is Furhan Khan and I am software developer from Northern Virginia. I recently graduated from the University of Virginia with a degree in computer science and am now looking for a full-time role to utilize my skills to make a real-world impact.</p>

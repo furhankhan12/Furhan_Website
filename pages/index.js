@@ -7,7 +7,7 @@ import CardSection from '../components/CardSection'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Spotify from '../components/spotifycomponent'
-
+import Test from '../components/test'
 
 export default function Home(){
 

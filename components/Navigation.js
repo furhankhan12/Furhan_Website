@@ -42,11 +42,6 @@ const Navigation = () => {
               <a className="nav-link">Pokedex</a>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link href = "/geo">
-              <a className="nav-link">Covid Cases</a>
-              </Link>
-            </li>
           </ul>
 
           <ul className="navbar-nav nav-flex-icons">

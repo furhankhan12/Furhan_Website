@@ -24,7 +24,7 @@ const Carousel = () => {
         
               <div className ="mask rgba-black-light d-flex justify-content-center align-items-center">
         
-                <div className ="text-center white-text mx-5 wow fadeIn">
+                <div className ="text-center white-text mx-5">
                   <h1 className ="mb-1">
                     <strong>Furhan Khan</strong>
                   </h1>
@@ -54,7 +54,7 @@ const Carousel = () => {
         
               <div className ="mask rgba-black-light d-flex justify-content-center align-items-center">
         
-                <div className ="text-center white-text mx-5 wow fadeIn">
+                <div className ="text-center white-text mx-5">
                   <h1 className ="mb-1">
                     <strong>Furhan Khan</strong>
                   </h1>
@@ -82,7 +82,7 @@ const Carousel = () => {
         
               <div className ="mask rgba-black-light d-flex justify-content-center align-items-center">
         
-                <div className ="text-center white-text mx-5 wow fadeIn">
+                <div className ="text-center white-text mx-5">
                   <h1 className ="mb-1">
                     <strong>Furhan Khan</strong>
                   </h1>

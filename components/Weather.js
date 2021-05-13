@@ -9,9 +9,6 @@ const Weather = () => {
     const[weather,setWeather] = useState(null)
     useEffect(() => {
         apiCall(city)
-        return () => {
-            console.log(apiCall)
-        }
     }, [])
 
     async function apiCall(cityName){
@@ -38,37 +35,38 @@ const Weather = () => {
 
     }
     return (
-        <section className="mt-5 mb-5 wow fadeIn">
+        <section className="mt-5 mb-5">
     
         <div className="row">
 
-        <div className="col-md-6 mb-4">
-
-<h3 className="h3 mb-3"> Featured Project</h3>
-<strong>Open Weather API Demo</strong>
-<div className = "text-center" id="icon"><br></br><img className = "wicon" src='openweather_logo.jpg' ></img></div>
-<p><br></br>This is a demo of an application I created using OpenWeather's free API. </p>
-<p>It display's the current weather of any city in OpenWeater's database. 
-    In the future I plan to expand on this project to automatically generate the current weather based on the user's location and also introduce more extensive error handling
-</p>
-<p className = "container text-center">
-    <strong>Try it out! Just enter the name of any city</strong>
-</p>
-<br></br>
-<div className = "text-center">
-<div className="form-outline">
-<form onSubmit = {handleSubmit}>
-  <input type="text" id="form1" className="form-control"  onChange = {handleChange} value = {city}/>
-  <label className="form-label" htmlFor="form1">Search Any City</label>
-</form>
-</div>
-</div>
-</div>
+            <div className="col-md-6 mb-4">
+            <h3 className="h3 mb-3 text-center"> Featured Project</h3>
+            <div className = "text-center">
+            <strong>Open Weather API Demo</strong>
+            </div>
+            <p className = "text-center"><br></br>This is a demo of an application I created using OpenWeather's free API. </p>
+            <p className = "text-center">It display's the current weather of any city in OpenWeater's database. 
+                In the future I plan to expand on this project to automatically generate the current weather based on the user's location and also introduce more extensive error handling
+            </p>
+            <div className = "text-center" id="icon"><img className = "wicon" src='openweather_logo.jpg' ></img> <br></br> <br></br></div>
+            <p className = "container text-center">
+                <strong>Try it out! Just enter the name of any city</strong>
+            </p>
+            <br></br>
+            <div className = "text-center">
+            <div className="form-outline">
+            <form onSubmit = {handleSubmit}>
+            <input type="text" id="form1" className="form-control"  onChange = {handleChange} value = {city}/>
+            <label className="form-label" htmlFor="form1">Search Any City</label>
+            </form>
+            </div>
+            </div>
+            </div>
 <div className="col-md-6 mb-1">
 
 { !!weather ?
 (
-<div className = "container">
+<div className = "container flex-center">
 <div className="card">
 
 <h6>{weather[0]}</h6>

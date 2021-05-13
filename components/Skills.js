@@ -1,18 +1,46 @@
+import Typed from 'react-typed'
 
+// import Particles from 'react-particles-js'
 const Skills =  () => {
     const divStyle = {
         height : '15px'
     }
+/*
+          <Particles params={{
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": false
+                    }
+                },
+                "size": {
+                    "value": 17,
+                    "random": true
+                },
+                "move": {
+                    "direction": "bottom",
+                    "outMode" : 'out'
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "color":{
+                  "value" : "#3f51b5"
+                }
+            }}} className = "skiller img-fluid mb-3"></Particles>
+*/
     return (
         <section>
-    
+        
+        <div className = "container">
         <h2 className="my-5 h3 text-center">Technical Skills</h2>
 
   
-        <div className="row features-small mb-5 mt-3 wow fadeIn">
+        <div className="row flex-center">
 
           
-          <div className="col-md-4">
+          <div className="col-xl-4 col-lg-12">
       
             <div className="row">
               <div className="col-2">
@@ -67,12 +95,21 @@ const Skills =  () => {
             </div>
           
           </div>
-          <div className="col-md-4 flex-center">
-            <img src="https://mdbootstrap.com/img/Others/screens.png" alt="MDB Magazine Template displayed on iPhone"
-              className="z-depth-0 img-fluid"></img>
+          
+          <div className="col-xl-4 col-lg-6 col-md-8">
+            <div className = "container typedComp">
+            <img src  = "/carbon5.png" className = "image-fluid mb-4 w-100 z-depth-3 rounded"></img>
+              <Typed
+                      strings={['FrontEnd_Skills','BackEnd_Skills','Database_Skills', 'andMore']}
+                      typeSpeed={30}
+                      backSpeed={40}
+                      loop
+                      className = "skilltext"
+              />
+            </div>
           </div>
           
-          <div className="col-md-4">
+          <div className="col-xl-4 col-lg-12">
       
             <div className="row">
               <div className="col-2">
@@ -130,7 +167,7 @@ const Skills =  () => {
           </div>
         </div>
     
-
+      </div>
       </section>
     )
 }
