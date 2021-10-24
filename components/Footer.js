@@ -6,8 +6,8 @@ const Footer = () => {
     role="button">Download My Resume
             <i className="fas fa-download ml-2">        </i>
         </a>
-        <a className="btn btn-outline-white" href="https://musicvisualizer.vercel.app/" target="_blank" role="button"> Check Out My Visualizer
-            <i className="fas fa-database ml-2"></i>
+        <a className="btn btn-outline-white" href="https://www.linkedin.com/in/furhan-khan12/" target="_blank" role="button"> Add Me On LinkedIn
+            <i className="fab fa-linkedin ml-3"></i>
         </a>
         <br></br>
         <br></br>
