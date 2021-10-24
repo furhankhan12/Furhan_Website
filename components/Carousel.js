@@ -1,5 +1,4 @@
 import Clock from '../components/Clock'
-
 const Carousel = () => {
     const clockStyle = {
         opacity : '.4',
@@ -29,7 +28,7 @@ const Carousel = () => {
                     <strong>Furhan Khan</strong>
                   </h1>
                    <p>
-                  <strong style = {clockStyle}><Clock></Clock></strong>
+                  <Clock style = {clockStyle}></Clock>
                   </p>
                   <p className ="mb-4 d-none d-md-block">
                     <strong>A Software Developer Based Out of Northern Virginia</strong>
@@ -58,7 +57,11 @@ const Carousel = () => {
                   <h1 className ="mb-1">
                     <strong>Furhan Khan</strong>
                   </h1>
-                  <p><strong style = {clockStyle}><Clock></Clock></strong></p>
+                  <p>
+                    <strong style = {clockStyle}>
+                      <Clock/>
+                    </strong>
+                  </p>
         
                   <p className ="mb-4 d-none d-md-block">
                     <strong>"If You Set Your Goals Ridiculously High and It's a Failure, You Will Fail Above Everyone Else's Success." - James Cameron</strong>

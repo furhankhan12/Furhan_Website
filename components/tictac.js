@@ -1,5 +1,5 @@
 import {useState} from 'react'
-const board = {0 : "_", 1 : "_" , 2 : "_", 3 : "_", 4 : "_",5 : "_",6 : "_", 7 : "_", 8 : "_"}
+const board = {0 : " ", 1 : " " , 2 : " ", 3 : " ", 4 : " ",5 : " ",6 : " ", 7 : " ", 8 : " "}
 const possibleLines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -11,7 +11,7 @@ const possibleLines = [
     [2, 4, 6]
   ]
 export default function tictac() {
-    const [toeboard, setToeboard] = useState(board)
+    const [toeboard, setToeboard] = useState({...board})
     const [win,setWin] = useState(null)
     const [marker, setMarker] = useState("X")
     function markBoard(id) {
@@ -23,19 +23,18 @@ export default function tictac() {
             return
         }
         toeboard[id] = marker
-        let newCopy = Object.assign({},toeboard)
-        setToeboard(newCopy)
+        setToeboard({...toeboard})
         marker === "X" ? setMarker("O") : setMarker("X")
         if(checkWin()){
-            setWin(`player ${marker} wins`)
+            setWin(`Player ${marker} Wins!`)
             return
         }
-        if (!Object.values(toeboard).includes("_")){
-            setWin("tie")
+        if (!Object.values(toeboard).includes(" ")){
+            setWin("Tie")
         }
     }
     function clearBoard(){
-        setToeboard({0 : "_", 1 : "_" , 2 : "_", 3 : "_", 4 : "_",5 : "_",6 : "_", 7 : "_", 8 : "_"})
+        setToeboard({...board})
         setWin(null)
         setMarker("X")
     }
@@ -52,11 +51,13 @@ export default function tictac() {
     }
 
     return (
-        <div className ="min-vh-100 p-5">
-            <div className = "container text-center p-5">
-            {win === null ? <div className = "container">it is player {marker}'s turn</div> : <div className = "container">{win}</div>}
-            <div className = "toegrid flex-center">
-            {Object.entries(toeboard).map(([key,value]) => <button key = {key} onClick = {() => markBoard(key)} >{value}</button>)}
+        <div className ="min-vh-50">
+            <div className = "container text-center p-5 w-50">
+            <h1>Tic Tac Toe</h1>
+            <hr className = "w-100"></hr>
+            {win === null ? <div className = "container"><h2>It Is Player {marker}'s Turn</h2></div> : <div className = "container"><h2>{win}</h2></div>}
+            <div className = "toegrid flex-center z-depth-3">
+            {Object.entries(toeboard).map(([key,value]) => <div className = "board-item" key = {key} onClick = {() => markBoard(key)} >{value}</div>)}
             </div>
             </div>
         </div>

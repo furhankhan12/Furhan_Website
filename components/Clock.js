@@ -14,7 +14,7 @@ const Clock = () => {
         setDate(new Date())
     }
     return(
-        <strong id="clock"> { days[date.getDay()] + " " +  date.toLocaleTimeString()}</strong>
+        <strong id="clock" className = "clockStyle"> { days[date.getDay()] + " " +  date.toLocaleTimeString()}</strong>
     )
 }
 

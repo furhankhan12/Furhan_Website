@@ -1,10 +1,17 @@
 import Typed from 'react-typed'
-
+import NoSSR from '../components/NoSSR'
+import useInView from 'react-cool-inview'
+//import Image from 'next/image'
 // import Particles from 'react-particles-js'
 const Skills =  () => {
+
     const divStyle = {
         height : '15px'
     }
+
+    const {observe,inView} = useInView({
+      onEnter: ({unobserve}) => unobserve()
+    })
 /*
           <Particles params={{
             "particles": {
@@ -37,7 +44,7 @@ const Skills =  () => {
         <h2 className="my-5 h3 text-center">Technical Skills</h2>
 
   
-        <div className="row flex-center">
+        <div className="row flex-center" ref = {observe}>
 
           
           <div className="col-xl-4 col-lg-12">
@@ -95,8 +102,9 @@ const Skills =  () => {
             </div>
           
           </div>
-          
-          <div className="col-xl-4 col-lg-6 col-md-8">
+          {inView &&
+          <div className="col-xl-4 col-lg-6 col-md-8 lazyLoadUp">
+            <NoSSR>
             <div className = "container typedComp">
             <img src  = "/carbon5.png" className = "image-fluid mb-4 w-100 z-depth-3 rounded"></img>
               <Typed
@@ -107,7 +115,9 @@ const Skills =  () => {
                       className = "skilltext"
               />
             </div>
+            </NoSSR>
           </div>
+          }
           
           <div className="col-xl-4 col-lg-12">
       

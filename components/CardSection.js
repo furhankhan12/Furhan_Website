@@ -1,3 +1,4 @@
+import useInView from 'react-cool-inview'
 const CardSection = () => {
     const divStyle2 = {
         height : '30px'
@@ -6,11 +7,14 @@ const CardSection = () => {
         height: '54px',
         width: '84px',
     }
+    const {observe,inView} = useInView({
+      onEnter: ({unobserve}) => unobserve()
+    })
     return (
         <section>
     
         <h3 className="h3 text-center mb-5">Overview</h3>
-
+        
 
         <div className="row wow fadeIn">
 
@@ -65,8 +69,9 @@ Html/Bootstrap/JavaScript, PHP and PostgreSQL
           
 
         
-          <div className="col-lg-6 col-md-12">
-           <div className = "cardHolder">
+          <div className="col-lg-6 col-md-12" ref = {observe}>
+          { inView &&
+           <div className = "cardHolder lazyLoadUp">
                <h3><strong>Meet Furhan Khan</strong></h3>
             <div className="flip-card">
                 <div className="flip-card-inner">
@@ -82,9 +87,10 @@ Html/Bootstrap/JavaScript, PHP and PostgreSQL
                     <p>Class of 2020</p>
                     <p>B.A. Computer Science</p>
                 </div>
+                </div>
+              </div>
             </div>
-            </div>
-            </div>
+            }
           </div>
           
 

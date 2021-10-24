@@ -39,8 +39,9 @@ const Weather = () => {
     
         <div className="row">
 
-            <div className="col-md-6 mb-4">
+            <div className="col-md-6 mb-2">
             <h3 className="h3 mb-3 text-center"> Featured Project</h3>
+            <hr className = "w-75"></hr>
             <div className = "text-center">
             <strong>Open Weather API Demo</strong>
             </div>
@@ -79,8 +80,9 @@ const Weather = () => {
 
 
 </div>
-) :   (<div className = "d-flex justify-content-md-center align-self-center" >       
-<div className="spinner-border text-success" role="status">
+) :   (
+<div className = "weatherSpinner d-flex justify-content-center align-items-center" >       
+<div className="spinner-border text-primary" role="status">
  <span className="visually-hidden"></span>
 </div></div>)}
 </div>    

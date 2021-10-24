@@ -33,8 +33,8 @@ const Navigation = () => {
               <a className="nav-link" href="https://hooshome.herokuapp.com/">Project Demo 2</a>
             </li>
             <li className="nav-item">
-              <Link href = "https://musicvisualizer.vercel.app/">
-              <a className="nav-link">Music Visualizer</a>
+              <Link href = "/other">
+              <a className="nav-link">Other Projects</a>
               </Link>
             </li>
             <li className="nav-item">
@@ -46,15 +46,18 @@ const Navigation = () => {
 
           <ul className="navbar-nav nav-flex-icons">
             <li className="nav-item">
-              <a href="https://www.linkedin.com/in/furhan-khan12/" className="nav-link" target="_blank">
+              <Link href = "https://www.linkedin.com/in/furhan-khan12/">
+              <a className="nav-link">
                 <i className="fab fa-linkedin"></i>
               </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="https://github.com/furhankhan12" className="nav-link border border-light rounded"
-                target="_blank">
+              <Link href="https://github.com/furhankhan12">
+              <a className="nav-link border border-light rounded">
                 <i className="fab fa-github mr-2"></i> Furhan's GitHub
               </a>
+              </Link>
             </li>
           </ul>
         </div>
