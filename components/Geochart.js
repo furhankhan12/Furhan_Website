@@ -59,6 +59,7 @@ function get(object, key, default_value) {
 export default function Geochart() {
     const currentDate = new Date();
     const yesterday = new Date(currentDate);
+    currentDate.setDate(currentDate.getDate()-1);
     yesterday.setDate(yesterday.getDate() - 2)
     console.log(currentDate)
     console.log(yesterday.toISOString());
