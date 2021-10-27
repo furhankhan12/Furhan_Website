@@ -60,7 +60,7 @@ export default function Geochart() {
     const currentDate = new Date();
     const yesterday = new Date(currentDate);
     currentDate.setDate(currentDate.getDate()-1);
-    yesterday.setDate(yesterday.getDate() - 3)
+    yesterday.setDate(yesterday.getDate() - 2)
     const [covid, setCovid] = useState(null)
     useEffect (() => {
         if (covid === null){
