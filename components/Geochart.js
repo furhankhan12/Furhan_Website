@@ -59,8 +59,8 @@ function get(object, key, default_value) {
 export default function Geochart() {
     const currentDate = new Date();
     const yesterday = new Date(currentDate);
-    currentDate.setDate(currentDate.getDate()-1);
-    yesterday.setDate(yesterday.getDate() - 2)
+    currentDate.setDate(currentDate.getDate()-2);
+    yesterday.setDate(yesterday.getDate() - 3)
     const [covid, setCovid] = useState(null)
     useEffect (() => {
         if (covid === null){
